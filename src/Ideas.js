@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link
@@ -11,15 +11,15 @@ import './assets/stylesheet.css'
 import TapButton from './components/TapButton'
 import GivenIdea from './components/GivenIdea'
 import AboutPage from './components/AboutPage'
-import { data } from './data/data.js'
+import data from './data/data.json'
 
 const Ideas = () => {
 
   const [ideaStatus, setIdeaStatus] = useState('start')
   const [ideaData, setIdeaData] = useState({
-    name: '',
+    name: 'example',
     image: '',
-    link: ''
+    link: 'https://www.example.com'
   })
   const [loading, setLoading] = useState(false)
 

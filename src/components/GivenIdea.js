@@ -2,9 +2,9 @@ import loadLogo from '../assets/load-logo.svg'
 
 const GivenIdea = ({ name, image, link, status, loadFunc, loadStatus }) => {
 
-  let sourceAssignRegex = /(?<=https:\/\/www\.)[a-z]+/
-
-  let source = link.match(sourceAssignRegex)
+  let sourceAssignRegex = /https:\/\/www\.[a-z]+/
+  let source = link.match(sourceAssignRegex)[0]
+  source = source.replaceAll('https://www.', '')
 
   let loadStatusClass = loadStatus ? 'pending' : 'success'
 
