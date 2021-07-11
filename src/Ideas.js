@@ -11,7 +11,7 @@ import './assets/stylesheet.css'
 import TapButton from './components/TapButton'
 import GivenIdea from './components/GivenIdea'
 import AboutPage from './components/AboutPage'
-import data from './data/data.json'
+import { data } from './data/data.js'
 
 const Ideas = () => {
 
