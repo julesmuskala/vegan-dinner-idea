@@ -16,7 +16,9 @@ const AboutPage = () => (
       </p>
     </main>
     <footer className="ideas-footer">
-
+      <p>
+        All recipes and pictures belong to their respective users.
+      </p>
     </footer>
   </>
 )

@@ -11,7 +11,7 @@ const GivenIdea = ({ name, image, link, status, loadFunc, loadStatus }) => {
   return (
     <>
       <div className={`given-idea__blocker given-idea__blocker-${loadStatusClass}`}>
-        <h2>Loading</h2>
+        <div />
         <img src={loadLogo} alt="" />
       </div>
       <a
@@ -25,7 +25,7 @@ const GivenIdea = ({ name, image, link, status, loadFunc, loadStatus }) => {
           alt=""
           onLoad={loadFunc}
         />
-        <p className="line-link idea-link">{`View recipe by ${source}`}</p>
+        <p className="idea-link">{`View recipe by ${source}`}</p>
       </a>
     </>
   )

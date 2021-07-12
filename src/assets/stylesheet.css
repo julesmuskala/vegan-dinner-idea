@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
   --green-color: #51B341;
   --grey-color: #C0C0C0;
@@ -92,7 +99,7 @@
 }
 
 .given-idea h2 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -102,7 +109,7 @@
   height: 27rem;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .line-link {
@@ -116,6 +123,14 @@
 
 .idea-link {
   font-size: 1.5rem;
+  color: rgba(0,0,0,0.25);
+  -webkit-transition: all 0.6s 0.1s ease;
+  -o-transition: all 0.6s 0.1s ease;
+  transition: all 0.6s 0.1s ease;
+}
+
+.idea-link:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .line-link::after {
@@ -190,10 +205,51 @@
           transform: translateY(0);
 }
 
-.given-idea__blocker h2 {
-  font-size: 3rem;
-  font-weight: normal;
+.given-idea__blocker img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.given-idea__blocker div {
   margin-bottom: 2rem;
+}
+
+.given-idea__blocker-pending div::before {
+  font-size: 2.5rem;
+  font-weight: normal;
+  content: "Loading";
+  -webkit-animation: loadBlink 2s linear infinite;
+          animation: loadBlink 2s linear infinite;
+}
+
+@-webkit-keyframes loadBlink {
+  0% {
+    content: "Loading";
+  }
+  33.33% {
+    content: "Loading.";
+  }
+  66.67% {
+    content: "Loading..";
+  }
+  100% {
+    content: "Loading...";
+  }
+}
+
+@keyframes loadBlink {
+  0% {
+    content: "Loading";
+  }
+  33.33% {
+    content: "Loading.";
+  }
+  66.67% {
+    content: "Loading..";
+  }
+  100% {
+    content: "Loading...";
+  }
 }
 
 .ideas-footer {
@@ -209,6 +265,15 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ideas-footer p {
+  color: var(--grey-color);
+  text-align: center;
+  width: 26rem;
 }
 
 .ideas-footer a {
