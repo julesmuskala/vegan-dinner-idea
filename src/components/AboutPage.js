@@ -4,7 +4,7 @@ const AboutPage = () => (
   <>
     <main className="ideas-main ideas-main-about">
       <p className="about-page__text">
-        This is just a fun open-souce projectyou can find on <a
+        This is just a fun open-souce project you can find on <a
           className="line-link"
           href="https://github.com/breakingbar/vegan-dinner-idea"
           target="_blank"
